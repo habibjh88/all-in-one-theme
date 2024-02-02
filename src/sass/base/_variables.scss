@@ -22,17 +22,18 @@ $breakpoints: ('sm': $sm, 'md': $md, 'lg': $lg, 'xl': $xl);
 
 //Colours
 
-$primary_color: var(--rt-primary-color, #007BFF);
-$primary_dark_color: var(--rt-primary-dark, #091EF6);
-$primary_light_color: var(--rt-primary-light, #4AA2FF);
-$secondary_color: var(--rt-secondary-color, #131619);
-$body_color: var(--rt-body-color, #3D3E41);
-$title_color: var(--rt-title-color, #161D25);
-$meta_color: var(--rt-meta-color, #808993);
-$meta_light: var(--rt-meta-light, #F2F8FF);
-$gray20: var(--rt-gray20, #E6E6E6);
-$gray40: var(--rt-gray40, #D0D0D0);
+$primary_color: var(--rt-primary-color);
+$primary_dark_color: var(--rt-primary-dark);
+$primary_light_color: var(--rt-primary-light);
+$secondary_color: var(--rt-secondary-color);
+$body_color: var(--rt-body-color);
+$title_color: var(--rt-title-color);
+$meta_color: var(--rt-meta-color);
+$meta_light: var(--rt-meta-light);
+$gray20: var(--rt-gray20);
+$gray40: var(--rt-gray40);
 $footer_bg: #F7F7F7;
+$banner_color: #f9f6f5;
 
 $white_color: #FFFFFF;
 $black_color: #000000;
@@ -64,9 +65,16 @@ $colors: (
 
 //Typography
 
-$base_font: var(--rt-body-font, 'IBM Plex Sans'), sans-serif;
-$heading_font: var(--rt-heading-font, 'IBM Plex Sans'), sans-serif;
-$menu_font: var(--rt-menu-font, 'IBM Plex Sans'), sans-serif;
+$font_RomeBold: 'RomeBold-Regular',sans-serif;
+$font_Butler: 'Butler',Times,serif;
+$font_ButlerLight: 'Butler-Light',Times,serif;
+$font_ModenaScript: 'Modena-Script',serif;
+$font_ETmodules: 'ETmodules',serif;
+$font_Roboto: 'Roboto', sans-serif;
+
+$base_font: $font_Roboto;
+$heading_font: $font_Butler;
+$menu_font: $font_Butler;
 
 $base_fs: 16px;
 

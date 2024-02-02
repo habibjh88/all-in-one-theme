@@ -46,19 +46,19 @@ class ColorSite extends Customizer {
 			'rt_primary_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Primary Color', 'newsfit' ),
-				'default' => '#007BFF'
+				'default' => '#4c353c'
 			],
 
 			'rt_primary_dark_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Primary Dark Color', 'newsfit' ),
-				'default' => '#091EF6'
+				'default' => '#341f26'
 			],
 
 			'rt_primary_light_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Primary Light Color', 'newsfit' ),
-				'default' => '#4AA2FF'
+				'default' => '#765761'
 			],
 
 			'rt_color_separator2' => [
@@ -68,7 +68,7 @@ class ColorSite extends Customizer {
 			'rt_secondary_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Secondary Color', 'newsfit' ),
-				'default' => '#131619'
+				'default' => '#ede3de'
 			],
 
 			'rt_site_color2' => [
@@ -79,13 +79,13 @@ class ColorSite extends Customizer {
 			'rt_body_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Body Color', 'newsfit' ),
-				'default' => '#3D3E41'
+				'default' => '#333333'
 			],
 
 			'rt_title_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Title Color', 'newsfit' ),
-				'default' => '#161D25'
+				'default' => '#333333'
 			],
 
 			'rt_meta_color' => [
@@ -103,13 +103,13 @@ class ColorSite extends Customizer {
 			'rt_gray20_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Gray # 1', 'newsfit' ),
-				'default' => '#E6E6E6'
+				'default' => '#d9d8dd'
 			],
 
 			'rt_gray40_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Gray # 2', 'newsfit' ),
-				'default' => '#D0D0D0'
+				'default' => '#afaab3'
 			],
 
 		] );

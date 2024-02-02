@@ -14,10 +14,6 @@ $widget_li_space: 8px;
 	color: $body_color;
 }
 
-.widget a:hover {
-	@extend .primaryColor;
-}
-
 .widget {
 	ul, ol {
 		padding-left: 0;
@@ -223,7 +219,6 @@ ol.wp-block-latest-comments li:last-child {
 	margin: 0 3px 6px;
 	line-height: 1.5;
 	background-color: $meta_light;
-	@extend .primaryColor;
 	border-radius: 3px;
 	padding: 10px 13px;
 	-webkit-transition: all 0.3s ease-out;
@@ -235,7 +230,6 @@ ol.wp-block-latest-comments li:last-child {
 }
 
 .widget_tag_cloud .tagcloud a:hover {
-	@extend .primaryBG;
 	border-color: $primary_color;
 	color: $white_color;
 }
@@ -319,7 +313,6 @@ ol.wp-block-latest-comments li:last-child {
 .widget .wp-calendar-table td#today a,
 .widget .wp-calendar-table td#today {
 	color: $white_color;
-	@extend .primaryBG;
 }
 
 .wp-calendar-nav-next {

@@ -34,16 +34,16 @@ class DynamicStyles {
 
 	private function inline_style() {
 
-		$primary_color       = newsfit_option( 'rt_primary_color' ) ?? '#00c194';
-		$primary_dark_color  = newsfit_option( 'rt_primary_dark_color' ) ?? '#091EF6';
-		$primary_light_color = newsfit_option( 'rt_primary_light_color' ) ?? '#4AA2FF';
-		$secondary_color     = newsfit_option( 'rt_secondary_color' ) ?? '#131619';
-		$body_color          = newsfit_option( 'rt_body_color' ) ?? '#3D3E41';
-		$title_color         = newsfit_option( 'rt_title_color' ) ?? '#161D25';
+		$primary_color       = newsfit_option( 'rt_primary_color' ) ?? '#4c353c';
+		$primary_dark_color  = newsfit_option( 'rt_primary_dark_color' ) ?? '#341f26';
+		$primary_light_color = newsfit_option( 'rt_primary_light_color' ) ?? '#765761';
+		$secondary_color     = newsfit_option( 'rt_secondary_color' ) ?? '#ede3de';
+		$body_color          = newsfit_option( 'rt_body_color' ) ?? '#333333';
+		$title_color         = newsfit_option( 'rt_title_color' ) ?? '#333333';
 		$meta_color          = newsfit_option( 'rt_meta_color' ) ?? '#808993';
 		$meta_light          = newsfit_option( 'rt_meta_light' ) ?? '#F2F8FF';
-		$gray20              = newsfit_option( 'rt_gray20_color' ) ?? '#E6E6E6';
-		$gray40              = newsfit_option( 'rt_gray40_color' ) ?? '#D0D0D0';
+		$gray20              = newsfit_option( 'rt_gray20_color' ) ?? '#d9d8dd';
+		$gray40              = newsfit_option( 'rt_gray40_color' ) ?? '#afaab3';
 
 		ob_start(); ?>
 
@@ -69,7 +69,6 @@ class DynamicStyles {
 		}
 
 		<?php
-		$this->site_fonts();
 		$this->topbar_css();
 		$this->header_css();
 		$this->breadcrumb_css();
@@ -298,38 +297,6 @@ class DynamicStyles {
 		echo self::css( 'body .site-footer .footer-copyright-wrapper a:hover', 'color', 'rt_copyright_link_hover_color' );
 		echo self::css( 'body .site-footer .footer-copyright-wrapper', 'background-color', 'rt_copyright_bg' );
 	}
-
-
-	protected function site_fonts() {
-
-		$typo_body           = json_decode( newsfit_option( 'rt_body_typo' ), true );
-		$typo_menu           = json_decode( newsfit_option( 'rt_menu_typo' ), true );
-		$typo_heading        = json_decode( newsfit_option( 'rt_all_heading_typo' ), true );
-		$body_font_family    = $typo_body['font'] ?? 'IBM Plex Sans';
-		$heading_font_family = $typo_heading['font'] ?? $body_font_family;
-		?>
-		:root{
-		--rt-body-font: '<?php echo esc_html( $typo_body['font'] ); ?>', sans-serif;;
-		--rt-heading-font: '<?php echo esc_html( $heading_font_family ); ?>', sans-serif;
-		--rt-menu-font: '<?php echo esc_html( $typo_body['font'] ); ?>', sans-serif;
-		}
-
-		<?php
-		echo self::font_css( 'body', $typo_body );
-		echo self::font_css( '.site-header', [ 'font' => $typo_menu['font'] ] );
-		echo self::font_css( '.main-header-section .newsfit-navigation ul li a', [ 'lineheight' => $typo_menu['lineheight'], 'regularweight' => $typo_menu['regularweight'] ] );
-		echo self::font_css( '.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6', [ 'font' => $typo_heading['font'], 'regularweight' => $typo_heading['regularweight'] ] );
-
-		$heading_fonts = [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' ];
-		foreach ( $heading_fonts as $heading ) {
-			$font = json_decode( newsfit_option( "rt_heading_{$heading}_typo" ), true );
-			if ( ! empty( $font['font'] ) ) {
-				$selector = "$heading, .$heading";
-				echo self::font_css( $selector, $font );
-			}
-		}
-	}
-
 
 	/**
 	 * Generate CSS

@@ -40,12 +40,12 @@ class Pannels {
 					'description' => esc_html__( 'NewsFit Header', 'newsfit' ),
 					'priority'    => 22,
 				],
-				[
-					'id'          => 'rt_typography_panel',
-					'title'       => esc_html__( 'Typography', 'newsfit' ),
-					'description' => esc_html__( 'NewsFit Typography', 'newsfit' ),
-					'priority'    => 24,
-				],
+//				[
+//					'id'          => 'rt_typography_panel',
+//					'title'       => esc_html__( 'Typography', 'newsfit' ),
+//					'description' => esc_html__( 'NewsFit Typography', 'newsfit' ),
+//					'priority'    => 21,
+//				],
 				[
 					'id'          => 'rt_color_panel',
 					'title'       => esc_html__( 'Colors', 'newsfit' ),

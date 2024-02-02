@@ -44,7 +44,7 @@ class HeaderTopbar extends Customizer {
 			'rt_top_bar' => [
 				'type'      => 'switch',
 				'label'     => __( 'Topbar Visibility', 'newsfit' ),
-				'default'   => 1,
+				'default'   => 0,
 				'edit-link' => '.topbar-row',
 			],
 

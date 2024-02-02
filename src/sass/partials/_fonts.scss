@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,700;0,900;1,100;1,400&display=swap');
+@font-face {
+	font-family: ETmodules;
+	font-display: block;
+	src: url('../fonts/modules.eot');
+	src: url('../fonts/modules.eot?#iefix') format("embedded-opentype"),
+	url('../fonts/modules.woff') format("woff"),
+	url('../fonts/modules.ttf') format("truetype"),
+	url('../fonts/modules.svg#ETmodules') format("svg");
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'RomeBold-Regular';
+	src: url('../fonts/RomeBold-Regular.woff')
+}
+
+@font-face {
+	font-family: 'Modena-Script';
+	src: url('../fonts/ModenaScript-Regular.woff') format('woff');
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Butler-Light';
+	src: url('../fonts/Butler-Light.woff') format('woff'), url('../fonts/Butler-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal
+}
+
+
+@font-face {
+	font-family: 'Butler';
+	src: url('../fonts/Butler.woff2') format('woff2'), url('../fonts/Butler.woff') format('woff');
+	font-weight: 500;
+	font-style: normal
+}

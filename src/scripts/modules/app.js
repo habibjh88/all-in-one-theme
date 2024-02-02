@@ -62,6 +62,10 @@ class App {
 			var menuHeight = mainMenu.outerHeight() || 0;
 			var headerTopbar = $('.newsfit-topbar').outerHeight() || 0;
 			var targrtScroll = headerTopbar + menuHeight;
+			if($('body').hasClass('newsfit-header-2')){
+				console.log('sssssss')
+				targrtScroll = $(window).height() - menuHeight;
+			}
 
 			// Main Menu
 			if ($(window).scrollTop() > targrtScroll) {

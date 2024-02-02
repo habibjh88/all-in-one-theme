@@ -1,0 +1,68 @@
+.newsfit-header-2 {
+	.newsfit-navigation .newsfit-navbar > li > a {
+		font-size: 14px;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		padding: 37px 16px;
+		&:hover,
+		&:active {
+			color: $gray40;
+		}
+	}
+	.newsfit-navigation .newsfit-navbar > li ul a {
+		letter-spacing: 1px;
+	}
+	@media (min-width: 900px) {
+		.site-header {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 999;
+
+			.site-branding {
+				display: none;
+			}
+
+			.menu-icon-wrapper {
+				display: none;
+			}
+
+			.logo-link,
+			h1 {
+				font-size: 26px;
+				line-height: 1;
+				margin: 0;
+			}
+		}
+
+		.newsfit-navigation > ul > li > a {
+			padding: 37px 16px;
+		}
+		.newsfit-navigation ul li {
+			&.site-logo {
+				a {
+					padding-top: 0;
+					padding-bottom: 0;
+					display: block;
+				}
+
+				img {
+					transform: translateY(17px);
+					height: 48px;
+					width: auto;
+				}
+			}
+		}
+
+		//.newsfit-navigation ul > li {
+		//	height: 96px;
+		//}
+
+	}
+
+	.main-header-section {
+		background-color: #d9d8dd;
+		border: none;
+	}
+}

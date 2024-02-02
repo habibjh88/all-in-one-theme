@@ -81,6 +81,7 @@ class Extras {
 		//Query string
 		$menu_query_string_key = get_post_meta( $item_id, 'newsfit_menu_qs_key', true );
 		$menu_query_string     = get_post_meta( $item_id, 'newsfit_menu_qs', true );
+		error_log( print_r( $_mega_menu, true ) . "\n\n", 3, __DIR__ . '/log.txt' );
 		?>
 
 		<?php if ( $item->menu_item_parent < 1 ) : ?>
@@ -89,6 +90,7 @@ class Extras {
 					<?php _e( 'Make as Mega Menu', 'newsfit' ); ?><br>
 					<select class="widefat" id="newsfit_mega_menu-<?php echo $item_id; ?>" name="newsfit_mega_menu[<?php echo $item_id; ?>]">
 						<option value=""><?php _e( "Choose Mega Menu", "newsfit" ) ?></option>
+						<option value="site-logo" <?php echo esc_attr($_mega_menu == 'site-logo' ? 'selected="selected"' : ''); ?>><?php _e( "Make it as Logo", "newsfit" ) ?></option>
 						<?php
 						for ( $item = 2; $item < 12; $item ++ ) {
 							$menu_item  = $item;

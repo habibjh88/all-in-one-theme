@@ -85,3 +85,25 @@
 		opacity: 1;
 	}
 }
+
+@keyframes fullwidth-header-bounce {
+	0% {
+		transform: translateY(0%)
+	}
+
+	12.5% {
+		transform: translateY(20%)
+	}
+
+	25% {
+		transform: translateY(0%)
+	}
+
+	37.5% {
+		transform: translateY(20%)
+	}
+
+	50% {
+		transform: translateY(0%)
+	}
+}

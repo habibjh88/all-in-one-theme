@@ -34,13 +34,18 @@
 		line-height: 22px;
 		font-weight: 500;
 		transition: all 0.3s ease-out 0s;
-		color: $title_color;
+		color: $primary_color;
 		padding: 32px 16px;
 		text-transform: capitalize;
 		position: relative;
 
 		@media (max-width: 1199px) {
 			padding: 4px 10px;
+		}
+
+		svg {
+			@include transition_default();
+			transform: scale(.8);
 		}
 	}
 
@@ -49,44 +54,20 @@
 		fill: $primary_color;
 	}
 
+	ul.menu > li > a:hover,
+	ul li a:hover,
 	ul li.current-menu-item > a,
 	ul li.current-menu-ancestor > a {
-		@extend .primaryColor;
-	}
-
-	> ul > li > a:before {
-		position: absolute;
-		z-index: 1;
-		content: "";
-		height: 2px;
-		@extend .primaryBG;
-		bottom: 26px;
-		width: 0;
-		left: 0;
-		right: 0;
-		margin: 0 auto;
-		transition: all 0.5s ease-out;
-	}
-
-	> ul > li > a:hover:before {
-		width: 50%;
-	}
-
-	ul li a:hover {
-		@extend .primaryColor;
-
+		color: $gray40;
 		svg {
-			fill: $primary_color;
+			fill: $gray40;
 		}
 	}
 
-	ul.menu > li > a:hover {
-		@extend .primaryColor;
-	}
 
 	ul.menu li.current-menu-item > a,
 	ul.menu li.current > a {
-		@extend .primaryColor;
+		color: $gray40;
 	}
 
 	/* #. Submenu */
@@ -135,7 +116,7 @@
 	ul li ul li a {
 		position: relative;
 		display: block;
-		color: $body_color;
+		color: $primary_color;
 		text-transform: inherit;
 		padding: 4px 27px 4px 18px;
 		font-weight: 500;
@@ -153,50 +134,9 @@
 	}
 
 	ul li ul li:hover > a {
-		@extend .primaryColor;
+		color: $gray40;
 	}
 
-	/*Menu hover effect*/
-	ul.menu li ul.dropdown-menu li:last-child:after {
-		border-bottom: none;
-	}
-
-	ul.menu li ul.dropdown-menu li a:hover {
-		@extend .primaryColor;
-	}
-
-	ul.menu li ul.dropdown-menu li a:before {
-		position: absolute;
-		z-index: 1;
-		content: "";
-		@extend .primaryBG;
-		height: 0.0625rem;
-		width: 0;
-		right: 0;
-		left: inherit;
-		bottom: 0;
-		transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-	}
-
-	ul.menu li ul.dropdown-menu li a:hover:before {
-		width: 100%;
-		left: 0;
-		right: inherit;
-	}
-
-	> ul li.page_item_has_children > a:after,
-	> ul li.menu-item-has-children > a:after {
-		content: "";
-		width: 7px;
-		height: 7px;
-		border: 1px solid var(--rt-primary-color);
-		display: inline-block;
-		transform: rotate(45deg) translate(1px, -4px);
-		border-left: none;
-		border-top: none;
-		margin-left: 8px;
-		@include transition_default();
-	}
 
 	.dropdown-menu .caret {
 		position: absolute;

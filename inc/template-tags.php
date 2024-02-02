@@ -351,7 +351,7 @@ if ( ! function_exists( 'newsfit_site_logo' ) ) {
 			echo '<h1 class="site-title">';
 		}
 		?>
-		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="<?php echo esc_attr( $has_mobile_logo ) ?>">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="logo-link <?php echo esc_attr( $has_mobile_logo ) ?>">
 			<?php
 			if ( ! empty( $site_logo ) ) {
 				echo wp_get_attachment_image( $site_logo, 'full', null, [ 'id' => 'rt-site-logo' ] );

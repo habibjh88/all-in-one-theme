@@ -52,15 +52,20 @@ class WalkerNav extends Walker_Nav_Menu {
 		$attributes .= ( $args->has_children ) ? ' class="dropdown-toggle" data-toggle="dropdown"' : '';
 
 		$item_output = $args->before;
-		$item_output .= '<a' . $attributes . '>';
-		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+
+		if ( 'site-logo' == $_mega_menu ) {
+			$item_output .= newsfit_site_logo( ! is_single() );
+		} else {
+			$item_output .= '<a' . $attributes . '>';
+			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
+		}
 
 		// add support for menu item title
 		if ( strlen( $item->attr_title ) > 2 ) {
 			$item_output .= '<h3 class="tit">' . $item->attr_title . '</h3>';
 		}
 		// add support for menu item descriptions
-		if ( strlen( $item->description ) > 2 ) {
+		if ( strlen( $item->description ) > 2 && 'logo' != $_mega_menu  ) {
 			$item_output .= '</a> <span class="sub">' . $item->description . '</span>';
 		}
 		$caret       = '<svg width="10" height="10" viewBox="0 0 10 10" fill="#575757" xmlns="http://www.w3.org/2000/svg"><path d="M9.78571 2.21429C9.5 1.92857 9.07143 1.92857 8.78571 2.21429L5 6L1.21429 2.21429C0.928571 1.92857 0.5 1.92857 0.214286 2.21429C-0.0714286 2.5 -0.0714286 2.92857 0.214286 3.21429L4.5 7.5C4.64286 7.64286 4.85714 7.71429 5 7.71429C5.14286 7.71429 5.35714 7.64286 5.5 7.5L9.78571 3.21429C10.0714 2.92857 10.0714 2.5 9.78571 2.21429Z"/></svg>';

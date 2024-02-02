@@ -43,15 +43,15 @@ class Header extends Customizer {
 			'rt_header_style' => [
 				'type'      => 'image_select',
 				'label'     => __( 'Choose Layout', 'newsfit' ),
-				'default'   => '1',
+				'default'   => '2',
 				'edit-link' => '.site-branding',
-				'choices'   => Fns::image_placeholder( 'menu' )
+				'choices'   => Fns::image_placeholder( 'menu', 2 )
 			],
 
 			'rt_menu_alignment' => [
 				'type'    => 'select',
 				'label'   => __( 'Menu Alignment', 'newsfit' ),
-				'default' => '',
+				'default' => 'justify-content-center',
 				'choices' => [
 					''                       => __( 'Menu Alignment', 'newsfit' ),
 					'justify-content-start'  => __( 'Left Alignment', 'newsfit' ),
@@ -81,6 +81,7 @@ class Header extends Customizer {
 				'type'        => 'switch',
 				'label'       => __( 'Sticky Header', 'newsfit' ),
 				'description' => __( 'Show header at the top when scrolling down', 'newsfit' ),
+				'default' => 1
 			],
 
 			'rt_tr_header' => [
@@ -106,13 +107,13 @@ class Header extends Customizer {
 			'rt_header_login_link' => [
 				'type'    => 'switch',
 				'label'   => __( 'User Login ?', 'newsfit' ),
-				'default' => 1,
+				'default' => 0,
 			],
 
 			'rt_header_search' => [
 				'type'    => 'switch',
 				'label'   => __( 'Search Icon ?', 'newsfit' ),
-				'default' => 1,
+				'default' => 0,
 			],
 
 			'rt_header_bar' => [
@@ -135,7 +136,7 @@ class Header extends Customizer {
 			'rt_get_started_button' => [
 				'type'    => 'switch',
 				'label'   => __( 'Get Started Button ?', 'newsfit' ),
-				'default' => 1
+				'default' => 0
 			],
 
 

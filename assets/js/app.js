@@ -94,6 +94,10 @@ var App = /*#__PURE__*/function () {
         var menuHeight = mainMenu.outerHeight() || 0;
         var headerTopbar = $('.newsfit-topbar').outerHeight() || 0;
         var targrtScroll = headerTopbar + menuHeight;
+        if ($('body').hasClass('newsfit-header-2')) {
+          console.log('sssssss');
+          targrtScroll = $(window).height() - menuHeight;
+        }
 
         // Main Menu
         if ($(window).scrollTop() > targrtScroll) {
@@ -10950,32 +10954,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/sass/rtl.scss":
-/*!***************************!*\
-  !*** ./src/sass/rtl.scss ***!
-  \***************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./assets/css/style.css":
-/*!******************************!*\
-  !*** ./assets/css/style.css ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/esm/classCallCheck.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/esm/classCallCheck.js ***!
@@ -11037,19 +11015,19 @@ function _createClass(Constructor, protoProps, staticProps) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _toPrimitive)
+/* harmony export */   "default": () => (/* binding */ toPrimitive)
 /* harmony export */ });
 /* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 
-function _toPrimitive(input, hint) {
-  if ((0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(input) !== "object" || input === null) return input;
-  var prim = input[Symbol.toPrimitive];
-  if (prim !== undefined) {
-    var res = prim.call(input, hint || "default");
-    if ((0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(res) !== "object") return res;
+function toPrimitive(t, r) {
+  if ("object" != (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(t) || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(i)) return i;
     throw new TypeError("@@toPrimitive must return a primitive value.");
   }
-  return (hint === "string" ? String : Number)(input);
+  return ("string" === r ? String : Number)(t);
 }
 
 /***/ }),
@@ -11063,15 +11041,15 @@ function _toPrimitive(input, hint) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _toPropertyKey)
+/* harmony export */   "default": () => (/* binding */ toPropertyKey)
 /* harmony export */ });
 /* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 /* harmony import */ var _toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toPrimitive.js */ "./node_modules/@babel/runtime/helpers/esm/toPrimitive.js");
 
 
-function _toPropertyKey(arg) {
-  var key = (0,_toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__["default"])(arg, "string");
-  return (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(key) === "symbol" ? key : String(key);
+function toPropertyKey(t) {
+  var i = (0,_toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__["default"])(t, "string");
+  return "symbol" == (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(i) ? i : String(i);
 }
 
 /***/ }),
@@ -11198,10 +11176,8 @@ function _typeof(o) {
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/assets/js/app": 0,
-/******/ 			"build/temp/style": 0,
-/******/ 			"build/temp/rtl": 0,
-/******/ 			"assets/css/admin": 0,
-/******/ 			"assets/css/style": 0
+/******/ 			"assets/css/style": 0,
+/******/ 			"assets/css/admin": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -11251,11 +11227,9 @@ function _typeof(o) {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["build/temp/style","build/temp/rtl","assets/css/admin","assets/css/style"], () => (__webpack_require__("./src/scripts/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["build/temp/style","build/temp/rtl","assets/css/admin","assets/css/style"], () => (__webpack_require__("./src/sass/style.scss")))
-/******/ 	__webpack_require__.O(undefined, ["build/temp/style","build/temp/rtl","assets/css/admin","assets/css/style"], () => (__webpack_require__("./src/sass/admin.scss")))
-/******/ 	__webpack_require__.O(undefined, ["build/temp/style","build/temp/rtl","assets/css/admin","assets/css/style"], () => (__webpack_require__("./src/sass/rtl.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["build/temp/style","build/temp/rtl","assets/css/admin","assets/css/style"], () => (__webpack_require__("./assets/css/style.css")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/style","assets/css/admin"], () => (__webpack_require__("./src/scripts/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["assets/css/style","assets/css/admin"], () => (__webpack_require__("./src/sass/style.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["assets/css/style","assets/css/admin"], () => (__webpack_require__("./src/sass/admin.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

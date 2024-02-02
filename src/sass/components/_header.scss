@@ -21,7 +21,7 @@ $dropdown_top_bottom_margin: 10px;
 
 .site-header {
 	position: relative;
-
+	font-family: $font_ButlerLight;
 	.site-branding {
 		display: flex;
 		align-items: center;
@@ -137,3 +137,6 @@ $dropdown_top_bottom_margin: 10px;
 @import "parts/_header-transparent";
 
 @import "parts/_hamburg-menu";
+
+//Header Style - 1
+@import "parts/_header-2";
