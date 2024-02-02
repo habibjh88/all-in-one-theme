@@ -1,0 +1,139 @@
+/* NewsFit Header Style
+***************************/
+
+$dropdown_top_bottom_margin: 10px;
+
+@media (min-width: 768px) {
+	#rt-mobile-logo {
+		display: none;
+	}
+}
+
+@media (max-width: 767px) {
+	#rt-site-logo {
+		display: none;
+	}
+}
+
+.main-header-section {
+	border-bottom: 1px solid rgba($black_color, 0.1);
+}
+
+.site-header {
+	position: relative;
+
+	.site-branding {
+		display: flex;
+		align-items: center;
+		font-size: 40px;
+		font-weight: bold;
+
+		h1 {
+			margin: 0;
+		}
+
+		h1 a {
+			display: flex;
+			@extend .primaryColor;
+			padding: 10px 0;
+			font-weight: bold;
+		}
+
+		h1 a:hover {
+			color: $primary_dark_color;
+		}
+	}
+
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+}
+
+/* Menu icon style
+***************************/
+
+.menu-icon-wrapper {
+
+	.menu-bar {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.ham_burger {
+			width: 47px;
+			height: 47px;
+			margin: 0 -13px;
+			.line {
+				stroke: $meta_color;
+			}
+			&:hover .line {
+				stroke: $primary_color;
+			}
+		}
+	}
+
+	a {
+		display: flex;
+		justify-content: center;
+	}
+
+	a:hover svg {
+		fill: $primary_color;
+	}
+
+	ul li {
+		position: relative;
+	}
+
+	svg {
+		width: 22px;
+		height: 22px;
+	}
+
+	ul.has-separator {
+		gap: 13px;
+	}
+	.has-separator li:not(:last-child){
+		padding-right: 14px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: 0;
+			width: 1px;
+			height: 23px;
+			background: $meta_color;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+	}
+}
+
+//Main Navigation
+@import "navigation";
+
+//Mega-menu CSS
+@import "parts/_header-megamenu";
+
+//Header search
+@import "parts/_header-search";
+
+// Off canvas drawer
+@import "parts/_header-offcanvas";
+
+//Topbar Navigation
+@import "parts/_header-topbar";
+
+// Sticky Menu CSS
+@import "parts/_header-sticky";
+
+//Transparent Header
+@import "parts/_header-transparent";
+
+@import "parts/_hamburg-menu";

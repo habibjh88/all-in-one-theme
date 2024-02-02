@@ -1,0 +1,98 @@
+.single-content .newsfit-post-card {
+	font-size: 17px;
+
+	.entry-title {
+		@include font_size(40px, 1.5);
+		margin-top: -5px;
+		margin-bottom: 15px;
+	}
+
+	.entry-content {
+		font-size: 18px;
+		margin-bottom: 40px;
+
+		> p + :is(h1, h2, h3) {
+			margin-top: 20px;
+		}
+	}
+
+	.separate-meta {
+		margin-bottom: 15px;
+	}
+
+	.entry-footer {
+		margin-bottom: 30px;
+
+		.post-tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 15px;
+		}
+	}
+
+	.newsfit-post-meta {
+		font-size: 20px;
+		color: $meta_color;
+		margin-bottom: 20px;
+	}
+
+}
+
+//Common Style for others
+body:not(.newsfit-single-1) {
+	.entry-content {
+		ul {
+			list-style: circle inside none;
+		}
+	}
+
+	.wp-block-quote {
+		padding: 0;
+		border: none;
+		font-style: italic;
+		font-weight: bold;
+		color: $title_color;
+
+		p {
+			margin-bottom: 5px;
+		}
+
+		cite, footer {
+			font-style: italic;
+			font-weight: bold;
+			color: $title_color;
+		}
+	}
+}
+
+.content-top-area {
+	position: relative;
+
+	.single-top-header {
+		position: absolute;
+		bottom: 80px;
+		left: 0;
+		right: 0;
+		width: 100%;
+	}
+
+}
+
+.post-thumbnail-wrap .wp-caption-text {
+	margin-top: 5px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	display: flex;
+	gap: 5px;
+	align-items: center;
+
+	span {
+		display: block;
+		line-height: 1;
+	}
+}
+
+@import "parts/_single-style-2";
+@import "parts/_single-style-3";
+@import "parts/_single-style-4";
+@import "parts/_thumbnail-pagination";

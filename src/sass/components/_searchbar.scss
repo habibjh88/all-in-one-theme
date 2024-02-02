@@ -1,0 +1,34 @@
+.newsfit-search-form .search-box {
+	position: relative;
+	border: 1px solid $gray40;
+	overflow: hidden;
+	input {
+		height: 50px;
+		padding: 0 15px;
+		border: none;
+		width: 100%;
+		background: transparent;
+
+	}
+	button {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		border: none;
+		border-radius: 0;
+		color: $meta_color;
+		background: transparent;
+		padding: 0 12px;
+
+		svg {
+			fill: $meta_color;
+			width: 22px;
+			height: 22px;
+			margin-top: 1.5px;
+		}
+		.btn-label {
+			display: none;
+		}
+	}
+}
