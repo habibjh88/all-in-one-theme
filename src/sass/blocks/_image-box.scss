@@ -1,0 +1,80 @@
+.newsfit-image-box-wrapper {
+
+
+	.main-title {
+		margin-top: 30px;
+		margin-bottom: 20px;
+		letter-spacing: 1px;
+
+		a:hover {
+			color: #4a3f4e;
+		}
+	}
+
+	.image-wrapper {
+		@include transition_default();
+		position: relative;
+		background: $white_color;
+
+		.image-link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&:hover {
+			box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.25);
+		}
+
+		img {
+			@include transition_default();
+		}
+
+		&:hover {
+			opacity: .7;
+		}
+	}
+
+	.description {
+		margin-bottom: 20px;
+		letter-spacing: 1px;
+	}
+
+	.pipe {
+		margin-top: 30px;
+		width: 1px;
+		height: 60px;
+		background: #decfcc;
+		display: inline-block;
+	}
+
+	&.style-2 {
+		text-align: center;
+
+		.image-button {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.image-wrapper {
+			padding: 20px;
+		}
+
+		.main-title {
+			font-size: 24px;
+			line-height: 30px;
+			color: #4a3f4e;
+			margin-top: 14px;
+		}
+	}
+
+
+	@media (max-width: 767px) {
+		br {
+			display: none;
+		}
+	}
+
+}

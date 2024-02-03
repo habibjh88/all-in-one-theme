@@ -38,7 +38,7 @@ class DynamicStyles {
 		$primary_dark_color  = newsfit_option( 'rt_primary_dark_color' ) ?? '#341f26';
 		$primary_light_color = newsfit_option( 'rt_primary_light_color' ) ?? '#765761';
 		$secondary_color     = newsfit_option( 'rt_secondary_color' ) ?? '#ede3de';
-		$body_color          = newsfit_option( 'rt_body_color' ) ?? '#333333';
+		$body_color          = newsfit_option( 'rt_body_color' ) ?? '#4a3f4e';
 		$title_color         = newsfit_option( 'rt_title_color' ) ?? '#4a3f4e';
 		$meta_color          = newsfit_option( 'rt_meta_color' ) ?? '#808993';
 		$meta_light          = newsfit_option( 'rt_meta_light' ) ?? '#F2F8FF';

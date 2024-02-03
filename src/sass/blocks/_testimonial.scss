@@ -279,7 +279,7 @@
 }
 
 .rt-el-testimonial-carousel.style3 .slide-wrap:after {
-	background: -webkit-linear-gradient(#90b2ff, var(--rt-primary-color));
+	background: -webkit-linear-gradient(#90b2ff, $primary_color);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }

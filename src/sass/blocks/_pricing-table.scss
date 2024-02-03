@@ -52,7 +52,6 @@
 	color: #212121;
 	font-size: 18px;
 	text-transform: uppercase;
-	font-family: var(--rt-heading-font);
 	font-weight: 700;
 	letter-spacing: 1.2px;
 	margin: 0;
@@ -63,7 +62,6 @@
 	color: #000000;
 	font-size: 32px;
 	line-height: 1.2;
-	font-family: var(--rt-heading-font);
 }
 
 .rt-pricing-box-wrapper .price-wrap .seperator,
@@ -123,7 +121,7 @@
 }
 
 .rt-pricing-box-wrapper footer .btn:after {
-	background-color: var(--rt-primary-color);
+	background-color: $primary_color;
 }
 
 .rt-pricing-box-wrapper .icon-holder {
@@ -138,7 +136,7 @@
 }
 
 .rt-pricing-box-wrapper .is-featured {
-	background: var(--rt-primary-color);
+	background: $primary_color;
 	position: absolute;
 	width: 200px;
 	text-align: center;

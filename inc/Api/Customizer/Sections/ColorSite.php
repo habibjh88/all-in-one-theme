@@ -79,7 +79,7 @@ class ColorSite extends Customizer {
 			'rt_body_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Body Color', 'newsfit' ),
-				'default' => '#333333'
+				'default' => '#4a3f4e'
 			],
 
 			'rt_title_color' => [

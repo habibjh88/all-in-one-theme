@@ -35,6 +35,7 @@ $gray40: var(--rt-gray40);
 $footer_bg: #F7F7F7;
 $banner_color: #f9f6f5;
 $link_color: #4a3f4e;
+$btn_hover_color: #afaab3;
 
 $white_color: #FFFFFF;
 $black_color: #000000;
@@ -74,7 +75,7 @@ $font_ETmodules: 'ETmodules',serif;
 $font_Roboto: 'Roboto', sans-serif;
 
 $base_font: $font_Roboto;
-$heading_font: $font_Butler;
+$heading_font: $font_ButlerLight;
 $menu_font: $font_Butler;
 
 $base_fs: 16px;
@@ -89,12 +90,3 @@ $ease: ease;
 
 //nav drawer width
 $nav_drawer_width: 350px;
-
-
-.elementor-kit-86 {
-	--e-global-typography-9add161-font-family: 'RomeBold-Regular',sans-serif;
-	--e-global-typography-bd14924-font-family: 'Butler',Times,serif;
-	--e-global-typography-53a25ae-font-family: 'Butler-Light',Times,serif;
-	--e-global-typography-0523c3d-font-family: 'Modena-Script',serif;
-	--e-global-typography-3e5564d-font-family: 'ETmodules',serif;
-}

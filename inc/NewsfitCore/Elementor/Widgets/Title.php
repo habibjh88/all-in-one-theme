@@ -41,10 +41,10 @@ class Title extends ElementorBase {
 		$this->add_control(
 			'top_sub_title',
 			[
-				'label'       => esc_html__( 'Top Sub Title', 'newsfit-core' ),
+				'label'       => esc_html__( 'Top Title', 'newsfit-core' ),
 				'type'        => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default'     => 'Why Choose Our Properties',
+				'default'     => 'WHO I AM',
 			]
 		);
 
@@ -54,8 +54,8 @@ class Title extends ElementorBase {
 				'label'       => esc_html__( 'Main Title', 'newsfit-core' ),
 				'type'        => Controls_Manager::TEXTAREA,
 				'rows'        => 3,
-				'default'     => "We're going to became <br><span>partners for the long run</span>",
-				'description' => esc_html__( "If you would like to use different color then separate word by <span>.", 'newsfit-core' ),
+				'default'     => "I’m a Planner. Strategist. Designer. Thinker. Doer. Perfectionist. Artist. Creative. Partner. Friend.",
+				'description' => esc_html__( "If you would like to use different color then separate word by <span></span>.", 'newsfit-core' ),
 			]
 		);
 
@@ -65,15 +65,6 @@ class Title extends ElementorBase {
 				'label'   => esc_html__( 'Description', 'newsfit-core' ),
 				'type'    => Controls_Manager::WYSIWYG,
 				'default' => 'Lorem Ipsum has been standard daand scrambled. Rimply dummy text of the printing and typesetting industry',
-			]
-		);
-
-		$this->add_control(
-			'bg_title',
-			[
-				'label'   => esc_html__( 'Background Title', 'newsfit-core' ),
-				'type'    => Controls_Manager::TEXT,
-				'default' => 'Properties',
 			]
 		);
 
@@ -108,7 +99,7 @@ class Title extends ElementorBase {
 			[
 				'label'   => esc_html__( 'Main Title Tag', 'the-post-grid' ),
 				'type'    => Controls_Manager::SELECT,
-				'default' => 'h2',
+				'default' => 'h3',
 				'options' => [
 					'h1' => esc_html__( 'H1', 'the-post-grid' ),
 					'h2' => esc_html__( 'H2', 'the-post-grid' ),
@@ -141,104 +132,15 @@ class Title extends ElementorBase {
 		*/
 
 		/*
-		 * Top Sub Title
+		 * Top Title
 		 * ************************************
 		 */
 
 		$this->start_controls_section(
 			'top_title_settings',
 			[
-				'label' => esc_html__( 'Top Sub Title Settings', 'newsfit-core' ),
+				'label' => esc_html__( 'Top Title Settings', 'newsfit-core' ),
 				'tab'   => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-		$this->add_control(
-			'top_title_icon',
-			[
-				'label'   => __( 'Choose Icons', 'newsfit-core' ),
-				'type'    => \Elementor\Controls_Manager::ICON,
-				'include' => [
-					'fa fa-check',
-					'fa fa-check-square',
-					'fa fa-square',
-					'fa fa-circle',
-					'fa fa-angle-right',
-					'fa fa-caret-right',
-					'fa fa-arrow-right',
-				],
-				'default' => 'fa fa-circle',
-			]
-		);
-
-
-		$this->add_control(
-			'icon_position',
-			[
-				'label'     => __( 'Border Style', 'newsfit-core' ),
-				'type'      => \Elementor\Controls_Manager::SELECT,
-				'default'   => 'left',
-				'options'   => [
-					'left'  => __( 'Left', 'newsfit-core' ),
-					'right' => __( 'Right', 'newsfit-core' ),
-					'both'  => __( 'Both', 'newsfit-core' ),
-				],
-				'condition' => [
-					'top_title_icon!' => '',
-				],
-			]
-		);
-
-		$this->add_control(
-			'top_title_icon_size',
-			[
-				'label'      => __( 'Icon Size', 'newsfit-core' ),
-				'type'       => Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range'      => [
-					'px' => [
-						'min'  => 5,
-						'max'  => 40,
-						'step' => 1,
-					],
-				],
-				'default'    => [
-					'unit' => 'px',
-					'size' => 7,
-				],
-				'selectors'  => [
-					'{{WRAPPER}} .section-title-wrapper .top-sub-title i'   => 'font-size: {{SIZE}}{{UNIT}};',
-					'{{WRAPPER}} .section-title-wrapper .top-sub-title svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-				],
-				'condition'  => [
-					'top_title_icon!' => '',
-				],
-			]
-		);
-
-
-		$this->add_control(
-			'top_title_color',
-			[
-				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Color', 'newsfit-core' ),
-				'selectors' => [
-					'{{WRAPPER}} .section-title-wrapper .top-sub-title' => 'color: {{VALUE}}',
-				],
-			]
-		);
-		$this->add_control(
-			'top_title_icon_color',
-			[
-				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Icon Color', 'newsfit-core' ),
-				'selectors' => [
-					'{{WRAPPER}} .section-title-wrapper .top-sub-title i'        => 'color: {{VALUE}}',
-					'{{WRAPPER}} .section-title-wrapper .top-sub-title svg path' => 'fill: {{VALUE}}',
-				],
-				'condition' => [
-					'top_title_icon!' => '',
-				],
 			]
 		);
 
@@ -248,7 +150,6 @@ class Title extends ElementorBase {
 				'name'     => 'top_title_two_typo',
 				'label'    => esc_html__( 'Typography', 'newsfit-core' ),
 				'selector' => '{{WRAPPER}} .section-title-wrapper .top-sub-title',
-//				'exclude' => ['font_family']
 			]
 		);
 
@@ -313,6 +214,15 @@ class Title extends ElementorBase {
 				'name'     => 'title_typo',
 				'label'    => esc_html__( 'Typography', 'newsfit-core' ),
 				'selector' => '{{WRAPPER}} .section-title-wrapper .main-title',
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name'     => 'title_typo2',
+				'label'    => esc_html__( 'Typography 2', 'newsfit-core' ),
+				'selector' => '{{WRAPPER}} .section-title-wrapper .main-title span',
 			]
 		);
 
@@ -466,137 +376,6 @@ class Title extends ElementorBase {
 				],
 				'condition' => [
 					'description_li_icon!' => '',
-				],
-			]
-		);
-
-		$this->end_controls_section();
-
-		// Background Title Settings
-		//==============================================================
-		$this->start_controls_section(
-			'background_title_settings',
-			[
-				'label' => esc_html__( 'Background Title Settings', 'newsfit-core' ),
-				'tab'   => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-		$this->add_control(
-			'bg_title_position',
-			[
-				'label'     => __( 'Position', 'newsfit-core' ),
-				'type'      => \Elementor\Controls_Manager::SELECT,
-				'default'   => '',
-				'options'   => [
-					''         => __( 'Absolute Position', 'newsfit-core' ),
-					'static'   => __( 'Position Static', 'newsfit-core' ),
-					'relative' => __( 'Position Relative', 'newsfit-core' ),
-				],
-				'selectors' => [
-					'{{WRAPPER}} .section-title-wrapper .bg-title-wrap' => 'position: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name'     => 'background_title_typo',
-				'label'    => esc_html__( 'Typography', 'newsfit-core' ),
-				'selector' => '{{WRAPPER}} .section-title-wrapper .background-title',
-			]
-		);
-
-		$this->add_control(
-			'bg_title_style',
-			[
-				'label'   => __( 'Title Style', 'newsfit-core' ),
-				'type'    => \Elementor\Controls_Manager::SELECT,
-				'default' => 'solid',
-				'options' => [
-					'solid'   => __( 'Solid', 'newsfit-core' ),
-					'outline' => __( 'Outline', 'newsfit-core' ),
-				],
-			]
-		);
-
-		$this->add_control(
-			'background_title_border_width',
-			[
-				'label'      => __( 'Outline Width', 'newsfit-core' ),
-				'type'       => Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range'      => [
-					'px' => [
-						'min'  => 1,
-						'max'  => 5,
-						'step' => 1,
-					],
-				],
-				'default'    => [
-					'unit' => 'px',
-					'size' => 1,
-				],
-				'selectors'  => [
-					'{{WRAPPER}} .section-title-wrapper .background-title' => ' -webkit-text-stroke-width:{{SIZE}}{{UNIT}};',
-				],
-				'condition'  => [
-					'bg_title_style' => 'outline'
-				]
-			]
-		);
-
-		$this->add_control(
-			'background_title_color',
-			[
-				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Color', 'newsfit-core' ),
-				'selectors' => [
-					'{{WRAPPER}} .section-title-wrapper .background-title' => 'color: {{VALUE}}; -webkit-text-stroke-color:{{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_control(
-			'background_title_opacity',
-			[
-				'label'      => __( 'Opacity', 'newsfit-core' ),
-				'type'       => Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range'      => [
-					'px' => [
-						'min'  => 0,
-						'max'  => 1,
-						'step' => 0.1,
-					],
-				],
-				'default'    => [
-					'unit' => 'px',
-					'size' => 1,
-				],
-				'selectors'  => [
-					'{{WRAPPER}} .section-title-wrapper .background-title' => 'opacity:{{SIZE}};',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'background_title_position',
-			[
-				'label'              => __( 'Position', 'newsfit-core' ),
-				'type'               => Controls_Manager::DIMENSIONS,
-				'size_units'         => [ 'px' ],
-				'default'            => [
-					'top'      => '0',
-					'right'    => '',
-					'bottom'   => '',
-					'left'     => '0',
-					'isLinked' => false,
-				],
-				'allowed_dimensions' => [ 'top', 'left' ],
-				'selectors'          => [
-					'{{WRAPPER}} .section-title-wrapper .bg-title-wrap' => 'top: {{TOP}}{{UNIT}}; right: {{RIGHT}}{{UNIT}}; bottom: {{BOTTOM}}{{UNIT}}; left: {{LEFT}}{{UNIT}}',
 				],
 			]
 		);

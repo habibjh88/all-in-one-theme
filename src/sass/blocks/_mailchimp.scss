@@ -40,7 +40,7 @@ Start MailChim Style
 }
 
 .rt-mailchimp-wrap input[type="submit"]:hover {
-	background: var(--rt-primary-color);
+	background: $primary_color;
 }
 
 .rt-mailchimp-wrap .rt-animation-btn {
@@ -81,7 +81,7 @@ Start MailChim Style
 	margin-bottom: 10px;
 	padding: 5px 15px;
 	height: 52px;
-	border: 1px solid var(--rt-primary-color);
+	border: 1px solid $primary_color;
 }
 
 .site-footer .rt-mailchimp-wrap .rt-animation-btn,

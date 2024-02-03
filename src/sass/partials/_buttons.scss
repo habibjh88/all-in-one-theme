@@ -62,7 +62,7 @@ button {
 
 //Button style
 .btn-primary {
-	@include button_style($white_color, $primary_color, $primary_dark_color);
+	@include button_style($white_color, $primary_color, $btn_hover_color);
 }
 
 .btn-secondary {

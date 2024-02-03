@@ -12,6 +12,7 @@ use RT\NewsFit\Helpers\Constants;
 use RT\NewsFit\NewsFitCore\Helper\Fns;
 use RT\NewsFit\NewsFitCore\Traits\SingletonTraits;
 use RT\NewsFit\NewsFitCore\Elementor\Core\ElementorCore;
+use RT\NewsFit\NewsFitCore\Elementor\Widgets\ImageBox;
 use RT\NewsFit\NewsFitCore\Elementor\Widgets\Button;
 use RT\NewsFit\NewsFitCore\Elementor\Widgets\ContactForm;
 use RT\NewsFit\NewsFitCore\Elementor\Widgets\ImagePlaceholder;
@@ -54,6 +55,7 @@ class ElementorController {
 
 		$widgets = [
 			Button::class,
+			ImageBox::class,
 			ContactForm::class,
 			ImagePlaceholder::class,
 			InfoBox::class,

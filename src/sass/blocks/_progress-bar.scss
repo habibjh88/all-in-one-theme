@@ -3,7 +3,6 @@
 	font-size: 16px;
 	color: #212121;
 	font-weight: bold;
-	font-family: var(--rt-body-font);
 }
 
 .rt-progress-bar.style2 .elementor-progress-percentage {
@@ -17,7 +16,7 @@
 	justify-content: center;
 	margin-top: -26px;
 	margin-right: -11px;
-	color: var(--rt-primary-color);
+	color: $primary_color;
 	font-size: 16px;
 	font-weight: bold;
 }
@@ -26,7 +25,7 @@
 	width: 25px;
 	height: 25px;
 	border-radius: 50%;
-	background: var(--rt-primary-color);
+	background: $primary_color;
 	border: 5px solid #fff;
 	box-shadow: -1.336px 6.871px 24px 0 rgb(0 0 0 / 17%);
 	display: inline-block;
