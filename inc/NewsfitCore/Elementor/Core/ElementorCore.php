@@ -29,6 +29,20 @@ class ElementorCore {
 		add_action( 'elementor/element/testimonial/section_testimonial/before_section_end', [ $this, 'custom_testimonial_control' ], 10, 2 );
 		add_action( 'elementor/element/section/section_background/before_section_end', [ $this, 'add_elementor_section_background_controls' ] );
 		add_action( 'elementor/frontend/section/before_render', [ $this, 'render_elementor_section_parallax_background' ] );
+		add_filter( 'elementor/fonts/additional_fonts', [ $this, 'addition_fonts' ] );
+	}
+
+	function addition_fonts( $fonts ) {
+		$fonts = [
+			// System fonts.
+			'RomeBold-Regular' => 'system',
+			'Butler'           => 'system',
+			'Butler-Light'     => 'system',
+			'Modena-Script'    => 'system',
+			'ETmodules'        => 'system',
+		];
+
+		return $fonts;
 	}
 
 	function add_elementor_section_background_controls( \Elementor\Element_Section $section ) {
@@ -132,8 +146,8 @@ class ElementorCore {
 				'type'         => \Elementor\Controls_Manager::SELECT,
 				'default'      => 'disable',
 				'options'      => [
-					'enable'        => __( 'Enable', 'newsfit-core' ),
-					'disable'       => __( 'Disable', 'newsfit-core' ),
+					'enable'  => __( 'Enable', 'newsfit-core' ),
+					'disable' => __( 'Disable', 'newsfit-core' ),
 				],
 				'prefix_class' => 'elementor-testimonial-quote-',
 				'separator'    => 'before',
@@ -145,7 +159,7 @@ class ElementorCore {
 			[
 				'name'           => 'testimonial_quote_image',
 				'label'          => __( 'Choose Quote Image', 'newsfit-core' ),
-				'types'          => [ 'classic'],
+				'types'          => [ 'classic' ],
 				'fields_options' => [
 					'background' => [
 						'default' => 'classic',
@@ -153,7 +167,7 @@ class ElementorCore {
 					],
 				],
 				'exclude'        => [ 'color' ],
-				'condition' => [
+				'condition'      => [
 					'custom_testimonial_quote_visibility' => 'enable',
 				],
 				'selector'       => '{{WRAPPER}} .elementor-testimonial-wrapper',

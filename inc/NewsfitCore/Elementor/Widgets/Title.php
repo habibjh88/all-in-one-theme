@@ -248,6 +248,7 @@ class Title extends ElementorBase {
 				'name'     => 'top_title_two_typo',
 				'label'    => esc_html__( 'Typography', 'newsfit-core' ),
 				'selector' => '{{WRAPPER}} .section-title-wrapper .top-sub-title',
+//				'exclude' => ['font_family']
 			]
 		);
 

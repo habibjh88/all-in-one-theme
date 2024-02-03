@@ -3,6 +3,7 @@ button {
 	cursor: pointer;
 }
 
+.elementor-button,
 .btn {
 	display: inline-block;
 	font-weight: 400;
@@ -15,10 +16,14 @@ button {
 	user-select: none;
 	border: 1px solid transparent;
 	border-radius: 0;
-	letter-spacing: 0.13px;
 	padding: ($base_fs - 2) ($base_fs + 6);
 	@include font_size($base_fs - 1, $base_fs - 1);
 	@include transition_default();
+	font-family: $font_RomeBold;
+	text-transform: uppercase;
+	padding: 18.5px 30px;
+	letter-spacing: 3px;
+
 
 	&:active {
 		box-shadow: none;

@@ -22,6 +22,7 @@ $dropdown_top_bottom_margin: 10px;
 .site-header {
 	position: relative;
 	font-family: $font_ButlerLight;
+	z-index: 999;
 	.site-branding {
 		display: flex;
 		align-items: center;

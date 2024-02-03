@@ -85,7 +85,7 @@ class ColorSite extends Customizer {
 			'rt_title_color' => [
 				'type'    => 'color',
 				'label'   => __( 'Title Color', 'newsfit' ),
-				'default' => '#333333'
+				'default' => '#4a3f4e'
 			],
 
 			'rt_meta_color' => [
