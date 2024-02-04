@@ -9,7 +9,7 @@
 ?>
 
 <div class="rt-el-testimonial-carousel <?php echo esc_attr( $layout ) ?>">
-	<div class="rt-slick">
+	<div class="rt-slick rt-carousel">
 
 		<?php foreach ( $items as $item ): ?>
 			<div class="slick-item">

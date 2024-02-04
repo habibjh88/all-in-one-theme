@@ -6632,9 +6632,68 @@ Section Title
 .rt-el-testimonial-carousel .testimonial-content {
   transform: translateY(40px);
   transition: transform 0.4s;
+  text-align: center;
 }
-.rt-el-testimonial-carousel li.is-active .testimonial-content {
+.rt-el-testimonial-carousel .testimonial-img {
+  margin-bottom: 20px;
+}
+.rt-el-testimonial-carousel .testimonial-img img {
+  display: inline-block;
+  border-radius: 50%;
+}
+.rt-el-testimonial-carousel .item-title {
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-family: "RomeBold-Regular", sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+.rt-el-testimonial-carousel .item-content {
+  font-family: "Butler-Light", Times, serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #333333;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+.rt-el-testimonial-carousel .item-name {
+  font-family: "Butler", Times, serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #333333;
+  font-weight: 400;
+}
+.rt-el-testimonial-carousel .slick-active .testimonial-content {
   transform: translateY(0);
+}
+
+.rt-carousel {
+  opacity: 0;
+}
+
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slick-dots button {
+  background: rgba(0, 0, 0, 0.3);
+  width: 12px;
+  height: 12px;
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+  border-radius: 50% !important;
+  padding: 0;
+  margin: 0 3px;
+}
+.slick-dots button:hover {
+  background: var(--rt-title-color);
+}
+.slick-dots .slick-active button {
+  background: var(--rt-title-color);
 }
 
 /*Info box

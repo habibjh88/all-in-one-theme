@@ -23,12 +23,15 @@
 		},
 
 		slickSlider: function () {
+			$('.rt-carousel').css({'opacity': 1, 'transition':'0.4s'})
 			$('.rt-slick').slick({
 				dots: true,
 				arrows: false,
 				fade: true,
 				speed: 100,
-				// centerMode: true,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				// adaptiveHeight: true,
 			});
 
 		},
