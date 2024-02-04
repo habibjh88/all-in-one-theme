@@ -21,7 +21,8 @@ mix.autoload({
 });
 
 
-mix.js('src/scripts/app.js', 'assets/js')
+mix
+	// .js('src/scripts/app2.js', 'assets/js')
 	.js('src/scripts/admin.js', 'assets/js')
 	.sass('src/sass/style.scss', `assets/css/style${min}.css`).sourceMaps(true, 'source-map')
 	.sass('src/sass/admin.scss', `assets/css/admin${min}.css`)

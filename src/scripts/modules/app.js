@@ -17,7 +17,21 @@ class App {
 			this.headerSearchOpen($);
 			this.backToTop($);
 			this.menuOffset($);
+			this.slickSlider($);
 		})
+
+
+	/*	$(window).on('elementor/frontend/init', () => {
+			if (elementorFrontend.isEditMode()) {
+				//For all widgets
+				elementorFrontend.hooks.addAction('frontend/element_ready/widget', () => {
+
+					this.slickSlider($);
+
+				});
+
+			}
+		});*/
 
 		$(document).on('load', () => {
 			this.menuOffset($);
@@ -30,6 +44,13 @@ class App {
 
 		$(window).on('resize', () => {
 			this.menuOffset($);
+		});
+	}
+
+	slickSlider($) {
+		$('.rt-slick').slick({
+			dots: true,
+			centerMode: true,
 		});
 	}
 
@@ -62,8 +83,7 @@ class App {
 			var menuHeight = mainMenu.outerHeight() || 0;
 			var headerTopbar = $('.newsfit-topbar').outerHeight() || 0;
 			var targrtScroll = headerTopbar + menuHeight;
-			if($('body').hasClass('newsfit-header-2')){
-				console.log('sssssss')
+			if ($('body').hasClass('newsfit-header-2')) {
 				targrtScroll = $(window).height() - menuHeight;
 			}
 
@@ -93,7 +113,7 @@ class App {
 	readyFunctionality($) {
 		const siteHeader = $('.site-header');
 		const paddingTop = siteHeader.height() + siteHeader.position().top + 10;
-		$('.has-trheader .newsfit-breadcrumb-wrapper').css({'paddingTop': paddingTop + 'px', 'opacity':1})
+		$('.has-trheader .newsfit-breadcrumb-wrapper').css({'paddingTop': paddingTop + 'px', 'opacity': 1})
 
 		const commentBody = $('.comment-list .comment-body').last().addClass('last-item');
 	}

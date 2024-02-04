@@ -271,9 +271,10 @@ if ( ! function_exists( 'newsfit_get_js' ) ) {
 	 *
 	 * @return string
 	 */
-	function newsfit_get_js( $filename ) {
-		$min  = WP_DEBUG ? '.js' : '.min.js';
-		$path = '/assets/js/' . $filename . $min;
+	function newsfit_get_js( $filename, $default_path = null ) {
+		$min          = WP_DEBUG ? '.js' : '.min.js';
+		$default_path = $default_path ?? '/assets/js/';
+		$path         = $default_path . $filename . $min;
 
 		return newsfit_get_file( $path );
 	}
@@ -614,7 +615,6 @@ if ( ! function_exists( 'newsfit_sidebar' ) ) {
 		<?php
 	}
 }
-
 
 
 if ( ! function_exists( 'newsfit_post_class' ) ) {
@@ -971,7 +971,7 @@ if ( ! function_exists( 'newsfit_contact_render' ) ) {
 }
 
 
-function newsfit_flaticon_icons(){
+function newsfit_flaticon_icons() {
 	return [
 		"flaticon-user",
 		"flaticon-user-1",
