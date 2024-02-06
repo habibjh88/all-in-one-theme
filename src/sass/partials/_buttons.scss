@@ -16,12 +16,11 @@ button {
 	user-select: none;
 	border: 1px solid transparent;
 	border-radius: 0;
-	padding: ($base_fs - 2) ($base_fs + 6);
 	@include font_size($base_fs - 1, $base_fs - 1);
 	@include transition_default();
 	font-family: $font_RomeBold;
 	text-transform: uppercase;
-	padding: 18.5px 30px;
+	padding: 18.5px 25px;
 	letter-spacing: 3px;
 
 

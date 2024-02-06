@@ -1,0 +1,40 @@
+/*Video Icon Block
+=================================================*/
+.rt-video-icon-wrapper {
+	padding: 15px;
+	background-color: #ffffff;
+	box-shadow: 0px 12px 18px -6px rgba(0, 0, 0, 0.3);
+
+	.video-icon-inner {
+		display: inline-flex;
+		align-items: center;
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: clamp(300px, -3.4722rem + 46.2963vw, 500px);
+		position: relative;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.video-popup-icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $black_color;
+		opacity: 0;
+		@include transition_default();
+	}
+
+	.button-text {
+		z-index: 9;
+		padding: 22px 26px;
+	}
+	.video-icon-inner:hover .video-popup-icon {
+		opacity: .6;
+	}
+
+}

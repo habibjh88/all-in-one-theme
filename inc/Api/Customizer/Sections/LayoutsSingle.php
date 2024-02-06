@@ -24,7 +24,7 @@ class LayoutsSingle extends Customizer {
 	 * Register controls
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		Customize::add_section( [
 			'id'    => $this->section_single_layout,
 			'title' => __( 'Single Layout', 'newsfit' ),

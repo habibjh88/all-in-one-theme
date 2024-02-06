@@ -47,27 +47,28 @@ class Customize {
 	/**
 	 * @return void
 	 */
-	public function includes_custom_controls(): void {
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/sanitization.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/headings.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/switch-control.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/image-radio-control.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/separator-control.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/gallery-control.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/select2-control.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/alfa-color.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/repeater-control.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/bg-attributes.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/tinymce-control.php';
-		require_once get_template_directory() . '/inc/NewsfitCore/customize/custom-controls/typography/typography-controls.php';
-//		require_once get_template_directory( . 'inc/customize/custom-controls/test.php';
-//		require_once get_template_directory( . 'inc/customize/custom-controls/typography/typography-customizer.php';
+	public function includes_custom_controls() {
+
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/sanitization.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/headings.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/switch-control.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/image-radio-control.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/separator-control.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/gallery-control.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/select2-control.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/alfa-color.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/repeater-control.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/bg-attributes.php';
+		require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/tinymce-control.php';
+		//require_once get_template_directory() . '/inc/NewsFitCore/Customize/custom-controls/typography/typography-controls.php';
+//		require_once get_template_directory( . 'inc/Customize/custom-controls/test.php';
+//		require_once get_template_directory( . 'inc/Customize/custom-controls/typography/typography-customizer.php';
 	}
 
 	/**
 	 * Customizer Panels
 	 */
-	public function add_customizer_panels( $wp_customize ): void {
+	public function add_customizer_panels( $wp_customize ) {
 		if ( empty( self::$panels ) ) {
 			return;
 		}
@@ -85,7 +86,7 @@ class Customize {
 	/**
 	 * Customizer sections
 	 */
-	public function add_customizer_sections( $wp_customize ): void {
+	public function add_customizer_sections( $wp_customize ) {
 
 		if ( empty( self::$sections ) ) {
 			return;
@@ -111,7 +112,7 @@ class Customize {
 	 *
 	 * @return void
 	 */
-	public function add_customizer_controls( $wp_customize ): void {
+	public function add_customizer_controls( $wp_customize ) {
 		new FieldManager( $wp_customize, self::$fields, self::$fields_group );
 	}
 
@@ -122,7 +123,7 @@ class Customize {
 	 *
 	 * @return void
 	 */
-	public static function add_panel( $panel ): void {
+	public static function add_panel( $panel ) {
 		self::$panels[] = $panel;
 	}
 
@@ -133,7 +134,7 @@ class Customize {
 	 *
 	 * @return void
 	 */
-	public static function add_panels( $panels ): void {
+	public static function add_panels( $panels ) {
 		foreach ( $panels as $panel ) {
 			self::$panels[] = $panel;
 		}
@@ -146,7 +147,7 @@ class Customize {
 	 *
 	 * @return void
 	 */
-	public static function add_section( $section ): void {
+	public static function add_section( $section ) {
 		self::$sections[] = $section;
 	}
 
@@ -157,7 +158,7 @@ class Customize {
 	 *
 	 * @return void
 	 */
-	public static function add_control( $field ): void {
+	public static function add_control( $field ) {
 		self::$fields[] = $field;
 	}
 
@@ -169,7 +170,7 @@ class Customize {
 	 *
 	 * @return void
 	 */
-	public static function add_controls( $section, $fields ): void {
+	public static function add_controls( $section, $fields ) {
 		self::$fields_group[ $section ] = $fields;
 	}
 }

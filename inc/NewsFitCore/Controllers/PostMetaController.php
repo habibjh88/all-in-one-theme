@@ -21,7 +21,7 @@ class PostMetaController {
 	 * Add all metabox
 	 * @return void
 	 */
-	function add_meta_box(): void {
+	function add_meta_box() {
 
 		$this->postmeta->add_meta_box( "rt_page_settings", __( 'Layout Settings', 'newsfit-core' ), [ 'page', 'post' ], '', '', 'high',
 			[

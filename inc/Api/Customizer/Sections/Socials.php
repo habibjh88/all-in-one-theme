@@ -22,7 +22,7 @@ class Socials extends Customizer {
 	 * Register controls
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		Customize::add_section( [
 			'id'          => $this->section_socials,
 			'panel'       => 'rt_contact_social_panel',

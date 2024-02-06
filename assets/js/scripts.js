@@ -20,19 +20,36 @@
 			NewsFit.backToTop();
 			NewsFit.menuOffset();
 			NewsFit.slickSlider();
+			NewsFit.magnificPopup();
+		},
+
+		magnificPopup: function (){
+			var yPopup = $(".popup-youtube");
+			if (yPopup.length) {
+				yPopup.magnificPopup({
+					disableOn: 700,
+					type: 'iframe',
+					mainClass: 'mfp-fade',
+					removalDelay: 160,
+					preloader: false,
+					fixedContentPos: false
+				});
+			}
 		},
 
 		slickSlider: function () {
 			$('.rt-carousel').css({'opacity': 1, 'transition':'0.4s'})
-			$('.rt-slick').slick({
-				dots: true,
-				arrows: false,
-				fade: true,
-				speed: 100,
-				autoplay: true,
-				autoplaySpeed: 5000,
-				// adaptiveHeight: true,
-			});
+			if (typeof $.fn.slick == 'function') {
+				$('.rt-slick').slick({
+					dots: true,
+					arrows: false,
+					fade: true,
+					speed: 100,
+					autoplay: true,
+					autoplaySpeed: 5000,
+					// adaptiveHeight: true,
+				})
+			}
 
 		},
 
@@ -175,9 +192,8 @@
 		if (elementorFrontend.isEditMode()) {
 			//For all widgets
 			elementorFrontend.hooks.addAction('frontend/element_ready/widget', () => {
-
 				NewsFit.slickSlider($);
-
+				NewsFit.magnificPopup();
 			});
 
 		}

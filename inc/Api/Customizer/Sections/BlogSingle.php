@@ -21,7 +21,7 @@ class BlogSingle extends Customizer {
 	 * Register controls
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		Customize::add_section( [
 			'id'          => $this->section_blog_single,
 			'title'       => __( 'Single Blog', 'newsfit' ),

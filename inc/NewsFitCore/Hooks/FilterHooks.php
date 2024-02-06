@@ -77,7 +77,7 @@ class FilterHooks {
 	 * Remove admin bar
 	 * @return void
 	 */
-	public static function remove_admin_bar(): void {
+	public static function remove_admin_bar() {
 		$remove_admin_bar = newsfit_option( 'rt_remove_admin_bar' );
 		if ( $remove_admin_bar && ! current_user_can( 'administrator' ) && ! is_admin() ) {
 			show_admin_bar( false );

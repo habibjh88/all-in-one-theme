@@ -209,7 +209,7 @@ if ( ! function_exists( 'newsfit_get_file' ) ) {
 	 *
 	 * @return string
 	 */
-	function newsfit_get_file( $path, $return_path = false ): string {
+	function newsfit_get_file( $path, $return_path = false ) {
 		$file = ( $return_path ? get_stylesheet_directory() : get_stylesheet_directory_uri() ) . $path;
 		if ( ! file_exists( $file ) ) {
 			$file = ( $return_path ? get_template_directory() : get_template_directory_uri() ) . $path;
@@ -286,10 +286,12 @@ if ( ! function_exists( 'newsfit_option' ) ) {
 	 * Get Customize Options value by key
 	 *
 	 * @param $key
+	 * @param $echo
+	 * @param $return_array
 	 *
 	 * @return mixed
 	 */
-	function newsfit_option( $key, $echo = false, $return_array = false ): mixed {
+	function newsfit_option( $key, $echo = false, $return_array = false ) {
 		if ( isset( Opt::$options[ $key ] ) ) {
 			if ( $echo ) {
 				echo newsfit_html( Opt::$options[ $key ] );
@@ -303,7 +305,7 @@ if ( ! function_exists( 'newsfit_option' ) ) {
 			}
 		}
 
-		return false;
+		return '';
 	}
 }
 
@@ -316,7 +318,7 @@ if ( ! function_exists( 'newsfit_get_social_html' ) ) {
 	 * @return void
 	 */
 
-	function newsfit_get_social_html( $color = '' ): void {
+	function newsfit_get_social_html( $color = '' ) {
 		ob_start();
 		$icon_style = newsfit_option( 'rt_social_icon_style' ) ?? '';
 		foreach ( Fns::get_socials() as $id => $item ) {
@@ -415,7 +417,7 @@ if ( ! function_exists( 'newsfit_classes' ) ) {
 	 *
 	 * @return string
 	 */
-	function newsfit_classes( $clsses ): string {
+	function newsfit_classes( $clsses ) {
 		return implode( ' ', $clsses );
 	}
 }
@@ -425,7 +427,7 @@ if ( ! function_exists( 'newsfit_scroll_top' ) ) {
 	 * Back-to-top button
 	 * @return void
 	 */
-	function newsfit_scroll_top( $class = '', $icon = 'scroll-top' ): void {
+	function newsfit_scroll_top( $class = '', $icon = 'scroll-top' ) {
 		if ( newsfit_option( 'rt_back_to_top' ) ) {
 			?>
 			<a href="#" class="scrollToTop <?php echo esc_attr( $class ) ?>">

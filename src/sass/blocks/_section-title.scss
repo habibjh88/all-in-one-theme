@@ -8,7 +8,7 @@ Section Title
 
 .section-title-wrapper {
 	position: relative;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 
 	.title-inner-wrapper {
 		position: relative;
@@ -77,10 +77,34 @@ Section Title
 		}
 	}
 
+	//Long arrow
+	.list-style-long-arrow & {
+		ul {
+			list-style: none;
+
+			li {
+				position: relative;
+				padding-left: 35px;
+				&:before {
+					content: "";
+					width: 20px;
+					height: 2px;
+					background: #decfcc;
+					display: inline-block;
+					position: absolute;
+					left: 0;
+					top: 15px;
+				}
+			}
+		}
+	}
+
 	a.title-link-button {
 		z-index: 11;
 		position: absolute;
 	}
+
+
 }
 
 @media (max-width: 767px) {

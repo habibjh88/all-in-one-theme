@@ -23,7 +23,7 @@ class Blog extends Customizer {
 	 * Register controls
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		Customize::add_section( [
 			'id'          => $this->section_blog,
 			'title'       => __( 'Blog Archive', 'newsfit' ),

@@ -21,7 +21,7 @@ class ColorBanner extends Customizer {
 	 * Register controls
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		Customize::add_section( [
 			'id'          => $this->section_banner_color,
 			'panel'       => 'rt_color_panel',

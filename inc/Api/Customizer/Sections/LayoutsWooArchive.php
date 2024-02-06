@@ -24,7 +24,7 @@ class LayoutsWooArchive extends Customizer {
 	 * Register controls
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		Customize::add_section( [
 			'id'    => $this->section_woocommerce_archive_layout,
 			'title' => __( 'Woocommerce Archive', 'newsfit' ),

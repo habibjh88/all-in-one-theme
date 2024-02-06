@@ -19,7 +19,7 @@ class SiteIdentity extends Customizer {
 	 * Register controls
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		Customize::add_controls( 'title_tagline', $this->get_controls() );
 	}
 

@@ -21,7 +21,7 @@ class Footer extends Customizer {
 	 * Register controls
 	 * @return void
 	 */
-	public function register(): void {
+	public function register() {
 		Customize::add_section( [
 			'id'          => $this->section_footer,
 			'title'       => __( 'Footer', 'newsfit' ),

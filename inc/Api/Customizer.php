@@ -57,7 +57,7 @@ class Customizer {
 			Customizer\Sections\LayoutsPage::class,
 //			Customizer\Sections\LayoutsError::class,
 			Customizer\Sections\Footer::class,
-			Customizer\Sections\ZControllerExample::class,
+//			Customizer\Sections\ZControllerExample::class,
 		];
 
 		if ( class_exists( 'WooCommerce' ) ) {
@@ -74,7 +74,7 @@ class Customizer {
 	 *
 	 * @param string $section_general
 	 */
-	public function register_controls(): void {
+	public function register_controls() {
 		foreach ( self::add_controls() as $class ) {
 			$control = new $class();
 			if ( method_exists( $control, 'register' ) ) {

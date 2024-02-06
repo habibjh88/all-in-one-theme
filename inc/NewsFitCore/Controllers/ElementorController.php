@@ -80,7 +80,7 @@ class ElementorController {
 	 * Elementor Editor Style
 	 * @return void
 	 */
-	public function editor_style(): void {
+	public function editor_style() {
 		$icon         = newsfit_get_img( 'icon.png' );
 		$editor_style = '.elementor-element .icon .rdtheme-el-custom{content: url(' . $icon . ');width: 28px;}';
 		$editor_style .= '.elementor-panel .select2-container {min-width: 100px !important; min-height: 30px !important;}';

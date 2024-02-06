@@ -315,16 +315,9 @@ class Title extends ElementorBase {
 				'default'   => '\f00c',
 				'options'   => [
 					''      => __( 'No Icon', 'newsfit-core' ),
-					'\f00c' => __( 'Check', 'newsfit-core' ),
-					'\f14a' => __( 'Check-square', 'newsfit-core' ),
-					'\f105' => __( 'Angle-right', 'newsfit-core' ),
-					'\f0da' => __( 'Caret-right', 'newsfit-core' ),
-					'\f061' => __( 'Arrow-right', 'newsfit-core' ),
-					'\f30b' => __( 'Long-arrow-alt-right', 'newsfit-core' ),
+					'long-arrow' => __( 'Long arrow', 'newsfit-core' ),
 				],
-				'selectors' => [
-					'{{WRAPPER}} .section-title-wrapper .description ul li::before' => 'content: "{{VALUE}}"',
-				],
+				'prefix_class' => 'list-style-',
 			]
 		);
 
@@ -346,10 +339,7 @@ class Title extends ElementorBase {
 					'size' => 0,
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .section-title-wrapper .description ul li::before' => 'transform: translateY( {{SIZE}}{{UNIT}} );',
-				],
-				'condition'  => [
-					'description_li_icon!' => '',
+					'{{WRAPPER}} .section-title-wrapper .description ul li::before' => 'top:( {{SIZE}}{{UNIT}} ) !important;',
 				],
 			]
 		);
@@ -370,12 +360,19 @@ class Title extends ElementorBase {
 			'description_list_icon_color',
 			[
 				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'List Icon Color', 'newsfit-core' ),
+				'label'     => esc_html__( 'Icon Color', 'newsfit-core' ),
 				'selectors' => [
-					'{{WRAPPER}} .section-title-wrapper .description ul li::before' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .section-title-wrapper .description ul li::before' => 'color: {{VALUE}};',
 				],
-				'condition' => [
-					'description_li_icon!' => '',
+			]
+		);
+		$this->add_control(
+			'description_list_icon_bg',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Icon Color', 'newsfit-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .section-title-wrapper .description ul li::before' => 'background-color: {{VALUE}};',
 				],
 			]
 		);
