@@ -19,6 +19,17 @@ class Hooks {
 		add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
 		add_action( 'admin_enqueue_scripts', [ __CLASS__, 'meta_css' ] );
 		add_action( 'newsfit_before_single_content', [ __CLASS__, 'before_single_content' ] );
+		add_action( 'wp_footer', [ __CLASS__, 'wp_footer_hook' ], 999 );
+	}
+
+	public static function wp_footer_hook() {
+		?>
+		<style>
+			.elementor-image-gallery {
+				opacity: 1;
+			}
+		</style>
+		<?php
 	}
 
 	/**
