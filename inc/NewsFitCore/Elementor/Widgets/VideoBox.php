@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class VideoIcon extends ElementorBase {
+class VideoBox extends ElementorBase {
 
 	public function __construct( $data = [], $args = null ) {
 		$this->rt_name = esc_html__( 'Video Box', 'newsfit-core' );

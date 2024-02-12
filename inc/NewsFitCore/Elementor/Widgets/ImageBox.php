@@ -169,7 +169,7 @@ class ImageBox extends ElementorBase {
 
 
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'image_height',
 			[
 				'label'      => __( 'Image Height', 'newsfit-core' ),

@@ -9,7 +9,6 @@ namespace RT\NewsFit\NewsFitCore\Controllers;
 
 use Elementor\Plugin;
 use RT\NewsFit\Helpers\Constants;
-use RT\NewsFit\NewsFitCore\Helper\Fns;
 use RT\NewsFit\NewsFitCore\Traits\SingletonTraits;
 use RT\NewsFit\NewsFitCore\Elementor\Core\ElementorCore;
 use RT\NewsFit\NewsFitCore\Elementor\Widgets\ImageBox;
@@ -26,7 +25,7 @@ use RT\NewsFit\NewsFitCore\Elementor\Widgets\Team;
 use RT\NewsFit\NewsFitCore\Elementor\Widgets\Testimonial;
 use RT\NewsFit\NewsFitCore\Elementor\Widgets\Title;
 use RT\NewsFit\NewsFitCore\Elementor\Widgets\TitleAnimated;
-use RT\NewsFit\NewsFitCore\Elementor\Widgets\VideoIcon;
+use RT\NewsFit\NewsFitCore\Elementor\Widgets\VideoBox;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -68,7 +67,7 @@ class ElementorController {
 			Testimonial::class,
 			Title::class,
 			TitleAnimated::class,
-			VideoIcon::class,
+			VideoBox::class,
 		];
 
 		foreach ( $widgets as $class ) {

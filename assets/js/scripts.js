@@ -25,6 +25,7 @@
 
 		magnificPopup: function (){
 			var yPopup = $(".popup-youtube");
+
 			if (yPopup.length) {
 				yPopup.magnificPopup({
 					disableOn: 700,

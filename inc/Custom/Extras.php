@@ -81,7 +81,6 @@ class Extras {
 		//Query string
 		$menu_query_string_key = get_post_meta( $item_id, 'newsfit_menu_qs_key', true );
 		$menu_query_string     = get_post_meta( $item_id, 'newsfit_menu_qs', true );
-		error_log( print_r( $_mega_menu, true ) . "\n\n", 3, __DIR__ . '/log.txt' );
 		?>
 
 		<?php if ( $item->menu_item_parent < 1 ) : ?>
