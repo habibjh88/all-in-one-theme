@@ -32,16 +32,17 @@ $dataSlick = [
 					if ( $item['image']['id'] ) {
 						echo "<div class='slider-img'>";
 						echo wp_get_attachment_image( $item['image']['id'], 'full' );
+						echo "<div class='overlay'></div>";
 						echo "</div>";
 					}
 					?>
 					<div class="content-inner">
 						<?php if ( $item['title'] ): ?>
-							<h3 class="item-title"><?php echo esc_html( $item['title'] ); ?></h3>
+							<h3 class="item-title"><?php echo newsfit_html($item['title']); ?></h3>
 						<?php endif; ?>
 
 						<div class="item-content">
-							<?php echo esc_html( $item['content'] ); ?>
+							<?php echo newsfit_html( $item['content'] ); ?>
 						</div>
 
 						<?php if ( $item['button_text'] ) : ?>

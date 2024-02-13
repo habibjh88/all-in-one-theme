@@ -87,7 +87,7 @@ class Slider extends ElementorBase {
 			[
 				'label'       => __( 'Button Text', 'newsfit-core' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
-				'default'     => __( 'Enter button text', 'newsfit-core' ),
+				'default'     => __( 'READ ARTICLE', 'newsfit-core' ),
 				'label_block' => true,
 			]
 		);
@@ -156,7 +156,7 @@ class Slider extends ElementorBase {
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'thumb_size',
 			[
 				'label'      => __( 'Thumb Size', 'newsfit-core' ),
@@ -164,13 +164,13 @@ class Slider extends ElementorBase {
 				'size_units' => [ 'px' ],
 				'range'      => [
 					'px' => [
-						'min'  => 50,
-						'max'  => 500,
+						'min'  => 100,
+						'max'  => 2000,
 						'step' => 1,
 					],
 				],
 				'selectors'  => [
-					'{{WRAPPER}} .rt-el-main-carousel .slider-img img' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .rt-el-main-carousel .slider-img img' => 'height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -237,9 +237,9 @@ class Slider extends ElementorBase {
 
 
 		$this->add_control(
-			'name_style_heading',
+			'button_style_heading',
 			[
-				'label'     => __( 'Name Style', 'newsfit-core' ),
+				'label'     => __( 'Button Style', 'newsfit-core' ),
 				'type'      => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -248,23 +248,107 @@ class Slider extends ElementorBase {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name'     => 'name_typo',
-				'label'    => esc_html__( 'Name Typo', 'newsfit-core' ),
-				'selector' => '{{WRAPPER}} .content-inner .item-name',
+				'name'     => 'button_typo',
+				'label'    => esc_html__( 'Button Typo', 'newsfit-core' ),
+				'selector' => '{{WRAPPER}} .content-inner .btn',
 			]
 		);
 
 		$this->add_control(
-			'name_color',
+			'button_bg',
 			[
 				'type'      => Controls_Manager::COLOR,
-				'label'     => esc_html__( 'Name Color', 'newsfit-core' ),
+				'label'     => esc_html__( 'Button BG', 'newsfit-core' ),
 				'selectors' => [
-					'{{WRAPPER}} .content-inner .item-name' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .content-inner .btn' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+		$this->add_control(
+			'button_bg_hover',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Button BG Hover', 'newsfit-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .content-inner .btn:hover' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
 
+		$this->add_control(
+			'button_color',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Button Color', 'newsfit-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .content-inner .btn' => 'color: {{VALUE}}',
+				],
+			]
+		);
+		$this->add_control(
+			'button_color_hover',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Button Color Hover', 'newsfit-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .content-inner .btn:hover' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'overlay_style',
+			[
+				'label'     => __( 'Overlay Style', 'newsfit-core' ),
+				'type'      => \Elementor\Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+		$this->add_control(
+			'overlay_bg',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Overlay Background', 'newsfit-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .slider-content .overlay' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+		$this->add_control(
+			'overlay_bg_hover',
+			[
+				'type'      => Controls_Manager::COLOR,
+				'label'     => esc_html__( 'Overlay Background Hover', 'newsfit-core' ),
+				'selectors' => [
+					'{{WRAPPER}} .slider-content:hover .overlay' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->add_control(
+			'slider_style',
+			[
+				'label'     => __( 'Slider Style', 'newsfit-core' ),
+				'type'      => \Elementor\Controls_Manager::HEADING,
+				'separator' => 'before',
+			]
+		);
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'button_border_hover',
+				'label' => __('Slider Border', 'newsfit-core'),
+				'selector' => '{{WRAPPER}} .slick-list',
+			]
+		);
+		$this->add_group_control(
+			\Elementor\Group_Control_Box_Shadow::get_type(),
+			[
+				'name'     => 'box_shadow',
+				'label'    => __( 'Box Shadow', 'newsfit-core' ),
+				'selector' => '{{WRAPPER}} .slick-list',
+			]
+		);
 
 		$this->end_controls_section();
 
