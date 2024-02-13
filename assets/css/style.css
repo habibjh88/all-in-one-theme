@@ -4583,6 +4583,7 @@ body.admin-bar .rt-sticky {
   justify-content: flex-end;
   align-items: flex-end;
   margin-bottom: 96px;
+  background-color: #EDE3DE;
 }
 .admin-bar .page-main-banner {
   height: calc(100vh - 126px);
@@ -7515,211 +7516,105 @@ Section Title
   font-weight: 500;
 }
 
-/*====================================
-Start RT Slider Block
-=====================================*/
-.rt-main-slider-wrapper {
+/* Slider Block
+=================================================*/
+.rt-el-main-carousel .slider-content {
   position: relative;
-  display: none;
+  text-align: center;
 }
-
-.rt-main-slider-wrapper img {
-  transition: 0.4s ease-in-out;
-  cursor: pointer;
+.rt-el-main-carousel .slider-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-.rt-swiper-slider .slider-dark-button {
-  display: inline-block;
-  font-weight: 600;
-  font-style: normal;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  border: 2px solid var(--rt-primary-dark);
-  border-radius: 30px;
-  padding: 17px 35px;
-  font-size: 15px;
-}
-
-.rt-swiper-slider .slider-dark-button:hover {
-  background-color: var(--rt-primary-dark);
-}
-
-.rt-slider-wrapper .slider-inner-wrapper {
+.rt-el-main-carousel .content-inner {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: transform 0.4s, opacity 0.4s;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex-wrap: nowrap;
-  align-content: center;
   align-items: center;
-  text-align: center;
-  position: absolute;
+  justify-content: center;
+  color: #FFFFFF;
+  padding: 20px 40px;
 }
-
-.rt-slider-wrapper .slider-inner-wrapper .bg {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
-  transform: scale(1);
-  transition: 1500ms;
-}
-
-.rt-slider-wrapper .swiper-slide-active {
-  z-index: 10;
-}
-
-.content-area.single-product .swiper-autoheight,
-.content-area.single-product .swiper-autoheight .swiper-slide {
-  height: 100%;
-}
-
-.content-area.single-product .swiper-autoheight .swiper-slide {
-  min-height: 250px;
-}
-
-@media (max-width: 600px) {
-  .content-area.single-product .swiper-autoheight,
-  .content-area.single-product .swiper-autoheight .swiper-slide {
-    height: 250px;
-  }
-  .content-area.single-product .swiper-autoheight img,
-  .content-area.single-product .swiper-autoheight .swiper-slide img {
-    height: 100% !important;
-    width: 100% !important;
-    -o-object-fit: cover !important;
-       object-fit: cover !important;
+@media (min-width: 992px) {
+  .rt-el-main-carousel .content-inner {
+    padding: 40px 80px;
   }
 }
-.rt-main-slider-wrapper.style2 .rt-slider-wrapper .swiper-slide {
-  text-align: center;
+@media (min-width: 1200px) {
+  .rt-el-main-carousel .content-inner {
+    padding: 50px 160px;
+  }
 }
-
-.rt-main-slider-wrapper.style2 .rt-slider-wrapper .swiper-slide img {
-  display: inline-block;
+.rt-el-main-carousel .item-title {
+  font-size: 20px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-family: "RomeBold-Regular", sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  color: #FFFFFF;
 }
-
-.rt-slider-wrapper .swiper-slide-active .slider-inner-wrapper .bg.zoom-out {
-  transform: scale(1.1);
-  transition-delay: 0.1s;
+.rt-el-main-carousel .item-content {
+  font-family: "Butler-Light", Times, serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #FFFFFF;
+  font-weight: 300;
+  margin-bottom: 30px;
 }
-
-.rt-slider-wrapper .slider-inner-wrapper .bg::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+.rt-el-main-carousel .item-name {
+  font-family: "Butler", Times, serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #FFFFFF;
+  font-weight: 400;
 }
-
-.rt-slider-wrapper .elementor-swiper-button {
-  text-align: center;
-  display: inline-block;
-  box-sizing: content-box;
-  transition: all 0.4s;
-}
-
-/* RT Slider Animation */
-.rt-slider-content-wrap {
-  margin-bottom: 10px;
-}
-
-.rt-slider-content-wrap * {
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* Slider button visibility */
-.rt-slider-wrapper.visible-on-hover .elementor-swiper-button {
-  visibility: hidden;
-  opacity: 0;
-  transition: 0.4s;
-}
-
-.rt-slider-wrapper.visible-on-hover:hover .elementor-swiper-button {
-  visibility: visible;
+.rt-el-main-carousel .slick-active .content-inner {
+  transform: translateY(0);
   opacity: 1;
 }
 
-.rt-slider-wrapper .slider-btn {
-  display: inline-block;
+.rt-carousel {
+  opacity: 0;
 }
 
-.rt-slider-wrapper .slider-title-wrap h2 {
-  font-size: 72px;
-  line-height: 82px;
-  font-weight: 700;
-  color: #ffffff;
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -60px 0 0;
+  position: relative;
+  z-index: 10;
 }
-
-.rt-slider-wrapper .slider-subtitle-wrap h4 {
-  font-size: 20px;
-  line-height: 28px;
-  color: #ffffff;
-  margin-bottom: 25px;
-}
-
-@media (max-width: 1023px) {
-  .rt-slider-wrapper .slider-title-wrap h2 {
-    font-size: 45px;
-    line-height: 55px;
-  }
-  .rt-slider-wrapper .slider-subtitle-wrap h4 {
-    font-size: 18px;
-    line-height: 25px;
-  }
-}
-@media (max-width: 600px) {
-  .rt-slider-wrapper .slider-title-wrap h2 br,
-  .rt-slider-wrapper .slider-subtitle-wrap h4 br {
-    display: none;
-  }
-}
-/* Slider Gallery Style  */
-.rt-main-slider-wrapper .rt-slider-gallery-wrapper {
-  position: absolute;
-  width: 100%;
-}
-
-.rt-gallery-thumbs .swiper-slide {
-  height: 150px;
+.slick-dots button {
+  background: rgba(255, 255, 255, 0.5);
+  width: 12px;
+  height: 12px;
+  display: block;
+  text-indent: -9999px;
   overflow: hidden;
-  transition: 0.5s;
+  border-radius: 50% !important;
+  padding: 0;
+  margin: 0 3px;
+}
+.slick-dots button:hover {
+  background: var(--rt-title-color);
+}
+.slick-dots .slick-active button {
+  background: var(--rt-title-color);
 }
 
-.rt-gallery-thumbs .swiper-slide .img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  transition: 0.5s;
-  transform-origin: center;
-}
-
-.rt-gallery-thumbs .swiper-slide:hover .img-bg {
-  transform: scale(1.1);
-}
-
-/*Remove Br on mobile*/
-@media (max-width: 600px) {
-  .remove-br br {
-    display: none;
-  }
-}
-/*End RT Slider*/
 /* ==================================
 Start MailChim Style
 ================================== */

@@ -41,16 +41,18 @@
 		slickSlider: function () {
 			$('.rt-carousel').css({'opacity': 1, 'transition':'0.4s'})
 			if (typeof $.fn.slick == 'function') {
-				$('.rt-slick').slick({
-					dots: true,
-					arrows: false,
-					fade: true,
-					speed: 100,
-					autoplay: true,
-					autoplaySpeed: 5000,
-					// adaptiveHeight: true,
-				})
+				$('.rt-slick').slick()
 			}
+
+			/*{
+				dots: true,
+					arrows: false,
+				fade: true,
+				speed: 100,
+				autoplay: true,
+				autoplaySpeed: 5000,
+				// adaptiveHeight: true,
+			}*/
 
 		},
 

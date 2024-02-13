@@ -5,11 +5,19 @@
  * @version 1.0
  */
 
+$dataSlick = [
+	'dots'          => true,
+	'arrows'        => false,
+	'fade'          => true,
+	'speed'         => 100,
+	'autoplay'      => true,
+	'autoplaySpeed' => 5000,
+];
 
 ?>
 
 <div class="rt-el-testimonial-carousel <?php echo esc_attr( $layout ) ?>">
-	<div class="rt-slick rt-carousel">
+	<div class="rt-slick rt-carousel" data-slick="<?php echo htmlspecialchars( wp_json_encode( $dataSlick ) ) ?>">
 
 		<?php foreach ( $items as $item ): ?>
 			<div class="slick-item">
